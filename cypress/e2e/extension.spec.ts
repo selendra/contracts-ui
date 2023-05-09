@@ -7,18 +7,16 @@ interface Window {
 
 describe('Signer extension flow on live networks', () => {
   before(() => {
-    cy.visit(`/instantiate/?rpc=wss://rococo-contracts-rpc.polkadot.io`);
+    cy.visit(`/instantiate/?rpc=wss://rpc-testnet.selendra.org`);
   });
-  it('connects to Rococo', () => {
-    cy.contains('Connecting to wss://rococo-contracts-rpc.polkadot.io').should('not.exist', {
+  it('connects to Selendra Testnet', () => {
+    cy.contains('Connecting to wss://rpc-testnet.selendra.org').should('not.exist', {
       timeout: 25000,
     });
   });
 
-  it('Rococo is selected in the network connection dropdown', () => {
-    cy.get('.dropdown.chain')
-      .find('.dropdown__single-value')
-      .should('contain', 'Contracts (Rococo)');
+  it('Selendra Testnet is selected in the network connection dropdown', () => {
+    cy.get('.dropdown.chain').find('.dropdown__single-value').should('contain', 'Selendra Testnet');
   });
 
   it('Displays help text for no extension installed', () => {
@@ -50,9 +48,7 @@ describe('Signer extension flow on live networks', () => {
       cy.contains(
         '2. Drip some funds into your account via the faucets of our supported networks.'
       ).should('be.visible');
-      cy.contains('Contracts on Rococo').should('be.visible');
-      cy.contains('Shiden / Shibuya').should('be.visible');
-      cy.contains('Aleph Zero Testnet').should('be.visible');
+      cy.contains('Selendra Testnet').should('be.visible');
     });
   });
 });

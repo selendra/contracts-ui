@@ -40,7 +40,7 @@ export function AccountsError() {
         target="_blank"
         href="https://docs.alephzero.org/aleph-zero/build/setting-up-testnet-account"
       >
-        Aleph Zero Testnet
+        Selendra Testnet
       </a>{' '}
     </Error>
   );
