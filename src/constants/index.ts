@@ -12,10 +12,10 @@ export const LOCAL_STORAGE_KEY = {
 
 export type LocalStorageKey = (typeof LOCAL_STORAGE_KEY)[keyof typeof LOCAL_STORAGE_KEY];
 
-export const ROCOCO_CONTRACTS = {
-  relay: 'Rococo',
-  name: 'Contracts (Rococo)',
-  rpc: 'wss://rococo-contracts-rpc.polkadot.io',
+export const SELENDRA_CONTRACTS = {
+  relay: undefined,
+  name: 'Selendra Live',
+  rpc: 'wss://rpc0.selendra.org',
 };
 
 const CUSTOM_ENDPOINT = localStorage.getItem(LOCAL_STORAGE_KEY.CUSTOM_ENDPOINT);
