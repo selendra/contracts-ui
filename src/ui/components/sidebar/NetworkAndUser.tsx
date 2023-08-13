@@ -17,7 +17,8 @@ const mainnetOptions = MAINNETS.map(network => ({
   value: network.rpc,
 }));
 
-const allOptions = [...testnetOptions, ...mainnetOptions];
+const allOptions = [...mainnetOptions, ...testnetOptions];
+//const allOptions = [...testnetOptions, ...mainnetOptions];
 
 const dropdownOptions = [
   {

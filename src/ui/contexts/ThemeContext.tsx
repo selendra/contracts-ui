@@ -14,7 +14,7 @@ type Props = {
 const INIT_STATE: Props = {
   theme:
     'theme' in localStorage
-      ? localStorage.theme === 'dark'
+      ? localStorage.theme === 'light'
         ? 'dark'
         : 'light'
       : window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -27,10 +27,10 @@ export const ThemeContext = createContext(INIT_STATE);
 export const ThemeContextProvider = ({ children }: React.PropsWithChildren<Partial<Props>>) => {
   const [theme, setTheme] = useLocalStorage<Theme>(LOCAL_STORAGE_KEY.THEME, INIT_STATE.theme);
   useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark');
+    if (theme === 'light') {
+      document.documentElement.classList.add('light');
     } else {
-      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.remove('light');
     }
   }, [theme]);
   return <ThemeContext.Provider value={{ theme, setTheme }}>{children}</ThemeContext.Provider>;

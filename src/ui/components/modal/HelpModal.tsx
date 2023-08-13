@@ -56,7 +56,7 @@ export const HelpModal = ({ isOpen, setIsOpen }: Omit<ModalProps, 'title'>) => {
         <li>
           <a
             className="group flex w-full justify-between items-center"
-            href="https://github.com/paritytech/contracts-ui"
+            href="https://github.com/selendra/contracts-ui"
             target="_blank"
             rel="noopener noreferrer"
           >
