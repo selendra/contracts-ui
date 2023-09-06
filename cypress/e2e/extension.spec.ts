@@ -7,16 +7,16 @@ interface Window {
 
 describe('Signer extension flow on live networks', () => {
   before(() => {
-    cy.visit(`/instantiate/?rpc=wss://rpc-testnet.selendra.org`);
+    cy.visit(`/instantiate/?rpc=wss://rpc.selendra.org`);
   });
-  it('connects to Selendra Testnet', () => {
-    cy.contains('Connecting to wss://rpc-testnet.selendra.org').should('not.exist', {
+  it('connects to Selendra', () => {
+    cy.contains('Connecting to wss://rpc.selendra.org').should('not.exist', {
       timeout: 25000,
     });
   });
 
-  it('Selendra Testnet is selected in the network connection dropdown', () => {
-    cy.get('.dropdown.chain').find('.dropdown__single-value').should('contain', 'Selendra Testnet');
+  it('Selendra is selected in the network connection dropdown', () => {
+    cy.get('.dropdown.chain').find('.dropdown__single-value').should('contain', 'Selendra');
   });
 
   it('Displays help text for no extension installed', () => {
@@ -48,7 +48,7 @@ describe('Signer extension flow on live networks', () => {
       cy.contains(
         '2. Drip some funds into your account via the faucets of our supported networks.'
       ).should('be.visible');
-      cy.contains('Selendra Testnet').should('be.visible');
+      cy.contains('Selendra').should('be.visible');
     });
   });
 });
