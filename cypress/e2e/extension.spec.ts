@@ -7,10 +7,10 @@ interface Window {
 
 describe('Signer extension flow on live networks', () => {
   before(() => {
-    cy.visit(`/instantiate/?rpc=wss://rpc.selendra.org`);
+    cy.visit(`/instantiate/?rpc=wss://rpc1.selendra.org`);
   });
   it('connects to Selendra', () => {
-    cy.contains('Connecting to wss://rpc.selendra.org').should('not.exist', {
+    cy.contains('Connecting to wss://rpc1.selendra.org').should('not.exist', {
       timeout: 25000,
     });
   });

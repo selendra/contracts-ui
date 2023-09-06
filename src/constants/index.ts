@@ -15,7 +15,7 @@ export type LocalStorageKey = (typeof LOCAL_STORAGE_KEY)[keyof typeof LOCAL_STOR
 export const SELENDRA_CONTRACTS = {
   relay: undefined,
   name: 'Selendra Live',
-  rpc: 'wss://rpc.selendra.org',
+  rpc: 'wss://rpc1.selendra.org',
 };
 
 const CUSTOM_ENDPOINT = localStorage.getItem(LOCAL_STORAGE_KEY.CUSTOM_ENDPOINT);
@@ -41,7 +41,7 @@ const SELENDRA_TESTNET = {
 const SELENDRA = {
   relay: undefined,
   name: 'Selendra',
-  rpc: 'wss://rpc.selendra.org',
+  rpc: 'wss://rpc1.selendra.org',
 };
 
 export const TESTNETS = [
