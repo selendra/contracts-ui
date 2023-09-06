@@ -4,7 +4,7 @@
 import { useNavigate } from 'react-router-dom';
 import { Error } from './Error';
 import { useApi } from 'ui/contexts';
-import { ROCOCO_CONTRACTS, LOCAL } from 'src/constants';
+import { SELENDRA_CONTRACTS, LOCAL } from 'src/constants';
 
 function ContractsNodeHelp() {
   const navigate = useNavigate();
@@ -33,7 +33,7 @@ function ContractsNodeHelp() {
           href="#"
           className="whitespace-nowrap"
           onClick={() => {
-            navigate(`/?rpc=${ROCOCO_CONTRACTS.rpc}`);
+            navigate(`/?rpc=${SELENDRA_CONTRACTS.rpc}`);
           }}
         >
           Contracts parachain on Rococo.

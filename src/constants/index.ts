@@ -15,7 +15,7 @@ export type LocalStorageKey = (typeof LOCAL_STORAGE_KEY)[keyof typeof LOCAL_STOR
 export const SELENDRA_CONTRACTS = {
   relay: undefined,
   name: 'Selendra Live',
-  rpc: 'wss://rpc0.selendra.org',
+  rpc: 'wss://rpc.selendra.org',
 };
 
 const CUSTOM_ENDPOINT = localStorage.getItem(LOCAL_STORAGE_KEY.CUSTOM_ENDPOINT);
@@ -32,33 +32,6 @@ export const LOCAL = {
 //   rpc: 'wss://wss.agung.peaq.network',
 // };
 
-const PHALA_TESTNET = {
-  relay: undefined,
-  name: 'Phala PoC-5',
-  rpc: 'wss://poc5.phala.network/ws',
-};
-
-// https://docs.astar.network/docs/build/environment/endpoints
-const SHIDEN = {
-  relay: 'Kusama',
-  name: 'Astar Shiden',
-  rpc: 'wss://rpc.shiden.astar.network',
-};
-
-// https://docs.astar.network/docs/build/environment/endpoints
-const ASTAR_SHIBUYA = {
-  relay: 'Tokyo',
-  name: 'Astar Shibuya',
-  rpc: 'wss://rpc.shibuya.astar.network',
-};
-
-// https://docs.astar.network/docs/build/environment/endpoints
-const ASTAR = {
-  relay: 'Polkadot',
-  name: 'Astar',
-  rpc: 'wss://rpc.astar.network',
-};
-
 const SELENDRA_TESTNET = {
   relay: undefined,
   name: 'Selendra Testnet',
@@ -69,20 +42,6 @@ const SELENDRA = {
   relay: undefined,
   name: 'Selendra',
   rpc: 'wss://rpc.selendra.org',
-};
-
-// https://docs.t3rn.io/collator/testnet/testnet-collator
-const T3RN_T0RN = {
-  relay: undefined,
-  name: 'T3RN T0RN',
-  rpc: 'wss://ws.t0rn.io',
-};
-
-// https://pendulum.gitbook.io/pendulum-docs/build/build-environment/foucoco-testnet
-const PENDULUM_TESTNET = {
-  relay: 'Rococo',
-  name: 'Pendulum Testnet',
-  rpc: 'wss://rpc-foucoco.pendulumchain.tech',
 };
 
 export const TESTNETS = [
